@@ -10,9 +10,7 @@ public class Seller {
         this.sellerID = ID;
     }
 
-    // Order history
-    public void initialize_OH_for_test() {
-
+    
     }
 
 }
