@@ -12,7 +12,7 @@ public class Customer {
     }
 
     public Cart getCart() {
-        return this.cart;
+        return this.c;
     }
 
     public void startShopping() {
