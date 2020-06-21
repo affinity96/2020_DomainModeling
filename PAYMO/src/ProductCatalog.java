@@ -34,36 +34,12 @@ public class ProductCatalog {
 			System.out.println(" - ITEM DESCRIPTION : \t" + this.pd[selectedItemId].getDescription());
 			System.out.println(" - ITEM OPTION : \t" + Arrays.toString(this.pd[selectedItemId].getOption()));
 			
-			while(true) {
-				int selectedOptionIndex = selectOption(this.pd[selectedItemId].getOption());
-				if (selectedOptionIndex == -1 ) {
-					System.out.println("[Error] Unvalid option insert.");
-				}
-				else {
-					Item selectedItem = new Item(this.pd[selectedItemId].getItemID(), this.pd[selectedItemId].getPrice(),
-							this.pd[selectedItemId].getOption(), this.pd[selectedItemId].getDescription(), selectedOptionIndex);
-					break;
-				}
-			}
-			
-			
+			String[] option = this.pd[selectedItemId].getOption();
+			this.pd[selectedItemId].selectOption(option);
 			
 	}
 	
-	public int selectOption(String[] option ) {
-		System.out.printf(" Please Select Option : ");
-		String selectedOption = sc.nextLine();
-		
-		int selectedOptionIndex = Arrays.asList(option).indexOf(selectedOption);
-		
-		if(selectedOptionIndex == -1) {
-			return -1;
-		}else {
-			return selectedOptionIndex;
-		}
-	}
-
-
+	
 	public void setItemList() {
 
 		System.out.print("Put Items in the itemlist\n");
