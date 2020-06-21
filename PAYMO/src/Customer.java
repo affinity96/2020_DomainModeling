@@ -11,8 +11,8 @@ public class Customer {
         return this.id;
     }
 
-    public Cart getCart() {
-        return this.cart;
+    public Cart getCart () {
+        return this.c;
     }
 
     public void startShopping() {
