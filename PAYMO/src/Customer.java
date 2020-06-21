@@ -1,6 +1,6 @@
 public class Customer {
     int id;
-    Cart C;
+    Cart c;
 
     public Customer(int id) {
         this.id = id;
@@ -16,7 +16,7 @@ public class Customer {
     }
 
     public void startShopping() {
-        C = new Cart();
+        c = new Cart();
 
     }
 }
