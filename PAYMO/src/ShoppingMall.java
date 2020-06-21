@@ -44,7 +44,6 @@ public class ShoppingMall {
 			System.out.print("____________< OrderList >____________\n");
 			System.out.println();
 
-
 			/* seller part */
 		}
 	}
