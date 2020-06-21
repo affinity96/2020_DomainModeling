@@ -18,7 +18,12 @@ public class ShoppingMall {
 		int selectedRole = input.nextInt();
 		
 		if (selectedRole == 1) {
+			System.out.println(" ________< LOG IN >_________");
+			System.out.print("Please Enter ID (INT) : ");
+			int customerID = input.nextInt();
+			 /*CUSTOMER 객체 생성해야함 */
 			System.out.print("____________< CATEGORY >____________\n");
+			
 			
 			catalog.showCategory();
 			System.out.printf("Please Select Category: ");
