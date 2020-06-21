@@ -1,6 +1,6 @@
 public class Customer {
     int id;
-    Cart C;
+    Cart c;
 
     public Customer(int id) {
         this.id = id;
@@ -11,12 +11,12 @@ public class Customer {
         return this.id;
     }
 
-    public Cart getCart() {
-        return this.cart;
+    public Cart getCart () {
+        return this.c;
     }
 
     public void startShopping() {
-        C = new Cart();
+        c = new Cart();
 
     }
 }

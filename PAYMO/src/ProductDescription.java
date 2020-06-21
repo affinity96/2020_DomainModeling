@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class ProductDescription {
 	int itemID ;
@@ -39,5 +41,22 @@ public class ProductDescription {
 		this.description = description;
 	}
 	
+	public void selectOption(String[] option ) {
+		Scanner sc = new Scanner(System.in);
+		System.out.printf(" Please Select Option : ");
+		String selectedOption = sc.nextLine();
+		
+		int selectedOptionIndex = Arrays.asList(option).indexOf(selectedOption);
+		while(true) {
+			if(selectedOptionIndex == -1) {
+				System.out.println("[Error] Unvalid option insert.");
+			}else {
+				Item selectedItem = new Item(this.getItemID(), this.getPrice(),
+						this.getOption(), this.getDescription(), selectedOptionIndex);
+				break;
+			}
+		}
+		
+	}
 	
 }
