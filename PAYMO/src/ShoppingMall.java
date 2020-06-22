@@ -43,6 +43,10 @@ public class ShoppingMall {
 			seller.setSellerID(sellerID);
 			System.out.print("____________< OrderList >____________\n");
 			System.out.println();
+			seller.showHistory();
+			System.out.printf("Please Select an Order: ");
+			int selectedOrder = input.nextInt();
+			seller.showSelectedHistory(selectedOrder);
 
 			/* seller part */
 		}

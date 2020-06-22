@@ -4,12 +4,12 @@ public class OrderHistory {
     ArrayList<Order> orders;
 
     public OrderHistory() {
-
+        // this.testSetOrders();
     }
 
     // add new Order to Arraylist
     public void addOrder(Order o) {
-        orders.add(o);
+        this.orders.add(o);
     }
 
     public ArrayList<Order> getOrder() {
@@ -23,10 +23,14 @@ public class OrderHistory {
         System.out.print("\n");
     }
 
+    public void showSelectedOrder(int index) {
+        this.orders.get(index).showOrderDetails();
+    }
+
     public void testSetOrders() {
         String[] o = { "s", "xl" };
         OrderLineItem oli = new OrderLineItem(1, 13000, 2, "OMG!", 13000, o, 2);
         Order ordertest = new Order(12, oli, "done");
-        orders.add(ordertest);
+        this.addOrder(ordertest);
     }
 }

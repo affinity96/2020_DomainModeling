@@ -16,9 +16,16 @@ public class Order {
     }
 
     // 하나의 order line item 들어옵니다
-    public Order(int ordererID, OrderLineItem orderlineitem, String OrderStatus) {
+    public Order(int ordererID, OrderLineItem oli, String OrderStatus) {
         this.orderlineitem = new ArrayList<>();
-        this.orderlineitem.add(orderlineitem);
+        this.orderlineitem.add(oli);
         this.OrderStatus = OrderStatus;
+    }
+
+    public void showOrderDetails() {
+        System.out.print("[" + this.ordererID + "]");
+        System.out.print("[" + this.dateTime + "\n");
+        System.out.print("[" + this.total + "\n");
+        System.out.print("[" + this.OrderStatus + "\n");
     }
 }
