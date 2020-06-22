@@ -4,7 +4,8 @@ public class OrderHistory {
     ArrayList<Order> orders;
 
     public OrderHistory() {
-        // this.testSetOrders();
+        orders = new ArrayList<>();
+        this.testSetOrders();
     }
 
     // add new Order to Arraylist
@@ -18,9 +19,11 @@ public class OrderHistory {
 
     public void showOrderHistory() {
         for (int i = 0; i < orders.size(); i++) {
-            System.out.print(orders.get(i).total + " ");
+            System.out.print(i + ": ");
+            System.out.print(orders.get(i).ordererID + " ");
+            System.out.print(orders.get(i).total + " \n");
         }
-        System.out.print("\n");
+        // System.out.print("\n");
     }
 
     public void showSelectedOrder(int index) {
